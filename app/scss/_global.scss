@@ -3,9 +3,14 @@ body {
   height: 100%;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
+  @extend %gilroy-400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $default;
+  overflow-x: hidden;
 }
 
 .main {
@@ -19,4 +24,15 @@ body{
   height: 1px;
   margin: -1px;
   overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 55px;
+  height: 68px;
 }

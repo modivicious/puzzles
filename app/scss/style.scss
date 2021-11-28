@@ -1,11 +1,118 @@
-@import 'fonts';
-@import 'vars';
-@import 'reset';
+@import "fonts";
+@import "vars";
+@import "reset";
 @import "libs";
-@import 'global';
+@import "global";
 
+//----------- header -----------
 
+.header {
+  padding: 35px 0 44px;
+}
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 55px;
+    @extend %gilroy-300;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__link {
+    &--active {
+      border-bottom: 1px solid #222222;
+    }
+  }
+}
 
+.socials {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 21px;
+  &__link {
+    display: flex;
+  }
+}
 
-@import 'media';
+//----------- main -----------
+
+//----------- footer -----------
+
+.footer {
+  padding: 39px 0 68px;
+  background-color: #2bb3dd;
+  color: #fff;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 56px;
+  }
+  &__nav-block {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title-link:not(:only-child) {
+    margin-bottom: 5px;
+  }
+  &__title {
+    @extend %gilroy-700;
+    text-transform: uppercase;
+  }
+  &__form {
+  }
+  &__label {
+    @extend %gilroy-700;
+    display: block;
+    padding-left: 7px;
+    margin-bottom: 5px;
+  }
+  &__form-box {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__input {
+    padding: 13px 25px;
+    width: 200px;
+    box-shadow: inset 2px 3px 6px rgba(123, 123, 123, 0.2);
+    border: none;
+    border-radius: 20px;
+    @extend %gilroy-300;
+    font-size: 12px;
+    color: $default;
+    margin-right: 7px;
+  }
+  &__form-btn {
+    width: 60px;
+    height: 44px;
+    background: linear-gradient(293.58deg, #f8c1c5 -32.47%, #e96f9b 122.25%);
+    box-shadow: inset 2px 3px 6px rgba(123, 123, 123, 0.2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .socials {
+    padding-left: 7px;
+    gap: 5px;
+    &__link {
+      padding: 5px;
+    }
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+@import "media";
