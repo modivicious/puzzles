@@ -1,4 +1,8 @@
 $default: #222;
+$title: rgba($default, 0.9);
+$darker: rgba($default, 0.8);
+$text: rgba($default, 0.7);
+$lighter: rgba($default, 0.6);
 
 %gilroy-300 {
   font-family: "gilroy-light", sans-serif;
@@ -16,5 +20,5 @@ $default: #222;
   font-family: "gilroy-bold", sans-serif;
 }
 %gilroy-800 {
-  font-family: "gilroy-heavy", sans-serif;
+  font-family: "gilroy-extrabold", sans-serif;
 }

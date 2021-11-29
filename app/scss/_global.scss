@@ -9,7 +9,7 @@ body {
   @extend %gilroy-400;
   font-size: 16px;
   line-height: 1.5;
-  color: $default;
+  color: $text;
   overflow-x: hidden;
 }
 
@@ -35,4 +35,20 @@ body {
 .logo {
   width: 55px;
   height: 68px;
+}
+
+.link-btn {
+  @extend %gilroy-800;
+  color: #fff;
+  background: linear-gradient(279.5deg, #5ad4fa -3.85%, #2bb3dd 114.74%);
+  box-shadow: 0px 0px 20px rgba(176, 193, 199, 0.5);
+  border-radius: 20px;
+  padding: 15px 32px;
+  display: inline-block;
+}
+
+.title {
+  font-size: 50px;
+  line-height: 1.1;
+  color: $title;
 }

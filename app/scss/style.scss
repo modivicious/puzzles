@@ -24,6 +24,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    color: $default;
   }
   &__link {
     &--active {
@@ -36,13 +37,201 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: max-content;
-  gap: 21px;
+  gap: 11px;
   &__link {
     display: flex;
+    padding: 5px;
   }
 }
 
 //----------- main -----------
+
+//----------- intro -----------
+
+.intro {
+  background-image: url("../images/content/background-pictures/1.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-bottom: 49px;
+  margin-bottom: 56px;
+  p {
+    max-width: 477px;
+    margin-bottom: 24px;
+  }
+  &__content {
+    padding-top: 19px;
+    max-width: 602px;
+  }
+  &__following {
+    @extend %gilroy-300;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: $darker;
+    span {
+      display: inline-block;
+      margin-right: 10px;
+      border-bottom: 1px solid $darker;
+    }
+  }
+  &__title {
+    @extend %gilroy-800;
+    font-size: 50px;
+    line-height: 1.1;
+    color: $default;
+    margin-bottom: 11px;
+  }
+  &__program {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 0.7px solid #dfdfdf;
+    box-shadow: 3px 3px 25px rgba(185, 185, 185, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 18px 32px 29px;
+    width: 482px;
+    margin-bottom: 27px;
+    span {
+      display: inline-block;
+      margin-bottom: 9px;
+    }
+  }
+  &__item {
+    padding-left: 28px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 19px;
+      height: 1px;
+      background-color: $default;
+    }
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+  &__link-btn {
+    margin-right: 33px;
+  }
+  &__bonus {
+    max-width: 226px;
+    font-size: 12px;
+    padding-left: 40px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../images/icons/gift.svg");
+      background-repeat: no-repeat;
+      width: 25px;
+      height: 28px;
+    }
+  }
+}
+
+//----------- suitable -----------
+
+.suitable {
+  padding-top: 36px;
+  margin-bottom: 44px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -44px;
+    right: -47px;
+    bottom: 0;
+    left: 0;
+    background-image: url("../images/content/background-pictures/2.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  &__inner {
+    padding: 29px 0 86px 53px;
+    background-color: #edf6f9;
+    border-radius: 20px;
+  }
+  &__content {
+    max-width: 602px;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 34px;
+  }
+  &__item {
+    padding-left: 85px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      background-image: url("../images/icons/puzzles.svg");
+      width: 49px;
+      height: 38px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 29px;
+    }
+  }
+}
+
+//----------- results -----------
+
+.results {
+  padding: 29px 42px 72px 53px;
+  background: #f9f0f3;
+  border-radius: 20px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 63px;
+    right: 0;
+    bottom: 0;
+    left: -71px;
+    background-image: url("../images/content/background-pictures/3.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+  }
+  &__title {
+    margin-bottom: 31px;
+  }
+  &__list {
+    width: max-content;
+    margin-left: auto;
+  }
+  &__item {
+    max-width: 568px;
+    padding-left: 83px;
+    position: relative;
+    min-height: 49px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      background-image: url("../images/icons/check.svg");
+      width: 47px;
+      height: 39px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 29px;
+    }
+    &:last-child {
+      @extend %gilroy-600;
+    }
+  }
+}
 
 //----------- footer -----------
 
@@ -69,8 +258,6 @@
   &__title {
     @extend %gilroy-700;
     text-transform: uppercase;
-  }
-  &__form {
   }
   &__label {
     @extend %gilroy-700;
@@ -106,9 +293,6 @@
   .socials {
     padding-left: 7px;
     gap: 5px;
-    &__link {
-      padding: 5px;
-    }
     path {
       fill: #fff;
     }
