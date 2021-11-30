@@ -414,6 +414,152 @@
   }
 }
 
+//----------- photos -----------
+
+.photos {
+  margin-bottom: 100px;
+  &__title {
+    margin-bottom: 54px;
+  }
+  &__slider {
+    margin-bottom: 33px;
+  }
+  &__slide {
+    margin: 0 50px;
+    picture {
+      display: block;
+      border: 1px solid rgba(223, 223, 223, 0.6);
+      box-shadow: 3px 3px 25px rgba(185, 185, 185, 0.15);
+      border-radius: 30px;
+      overflow: hidden;
+    }
+  }
+  &__img {
+    max-width: 754px;
+    width: 100%;
+    height: 435px;
+    object-fit: cover;
+  }
+  .slick-list {
+    max-width: 854px;
+    margin: 0 auto;
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 131px;
+    padding: 40px;
+  }
+  .slick-prev {
+    left: 14px;
+  }
+  .slick-next {
+    right: 14px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    padding-top: 26px;
+    li {
+      &:not(:last-child) {
+        margin-right: 19px;
+      }
+      &.slick-active {
+        button {
+          background-color: #bfcbcf;
+        }
+      }
+      button {
+        display: block;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #bfcbcf;
+        border-radius: 50%;
+      }
+    }
+  }
+  .link-arrow {
+    display: inline-block;
+    &::after {
+      content: "";
+      display: block;
+      width: 151px;
+      height: 23px;
+      background-image: url("../images/icons/link-arrow.svg");
+    }
+  }
+  .link-box {
+    display: flex;
+    justify-content: end;
+    max-width: 854px;
+    margin: 0 auto;
+  }
+  &__link {
+    margin-right: 50px;
+  }
+}
+
+//----------- lesson -----------
+
+.lesson {
+  padding-bottom: 38px;
+  background-repeat: no-repeat;
+  background-position: bottom -42px left -54px;
+  &__title {
+    line-height: 1.2;
+    margin-bottom: 50px;
+  }
+  &__form {
+    max-width: 463px;
+    display: grid;
+    row-gap: 17px;
+    margin: 0 71px 0 auto;
+  }
+  &__input,
+  &__select {
+    display: block;
+    width: 100%;
+    padding: 16px 25px;
+    background-color: #ffffff;
+    border: 1px solid rgba(183, 183, 183, 0.9);
+    border-radius: 20px;
+    font-size: 12px;
+    @extend %gilroy-300;
+    color: $darker;
+  }
+  input[type="number"] {
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    -moz-appearance: textfield;
+  }
+  input::placeholder {
+    color: $darker;
+  }
+  input::-moz-placeholder {
+    color: $darker;
+    opacity: 1;
+  }
+  &__select {
+    appearance: none;
+    background-image: url("../images/icons/angle-down.svg");
+    background-repeat: no-repeat;
+    background-position: center right 23px;
+  }
+  &__option {
+    color: $darker;
+    font-size: 16px;
+  }
+  &__form-box {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 17px;
+  }
+}
+
 //----------- footer -----------
 
 .footer {
