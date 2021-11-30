@@ -49,7 +49,6 @@
 //----------- intro -----------
 
 .intro {
-  background-image: url("../images/content/background-pictures/1.svg");
   background-repeat: no-repeat;
   background-position: right;
   padding-bottom: 49px;
@@ -144,20 +143,18 @@
   padding-top: 36px;
   margin-bottom: 44px;
   position: relative;
-  &::before {
-    content: "";
+  &__bg {
     position: absolute;
     top: -44px;
     right: -47px;
     bottom: 0;
     left: 0;
-    background-image: url("../images/content/background-pictures/2.svg");
     background-repeat: no-repeat;
     background-position: right;
   }
   &__inner {
-    padding: 29px 0 86px 53px;
-    background-color: #edf6f9;
+    padding: 29px 49px 79px;
+    background-color: $box-one;
     border-radius: 20px;
   }
   &__content {
@@ -188,18 +185,16 @@
 //----------- results -----------
 
 .results {
-  padding: 29px 42px 72px 53px;
-  background: #f9f0f3;
+  padding: 29px 49px 69px;
+  background-color: $box-two;
   border-radius: 20px;
   position: relative;
-  &::before {
-    content: "";
+  &__bg {
     position: absolute;
     top: 63px;
     right: 0;
     bottom: 0;
     left: -71px;
-    background-image: url("../images/content/background-pictures/3.svg");
     background-repeat: no-repeat;
     background-position: left;
   }
@@ -230,6 +225,192 @@
     &:last-child {
       @extend %gilroy-600;
     }
+  }
+}
+
+//----------- introductory -----------
+
+.introductory {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-between;
+  p {
+    margin-bottom: 28px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -84px;
+      left: 230px;
+      width: 92px;
+      height: 92px;
+      background-image: url("../images/icons/arrow.svg");
+      transform: rotate(356deg);
+    }
+  }
+  &__content {
+    max-width: 627px;
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+  &__link-btn {
+    padding: 15px 35px;
+  }
+  &__results {
+    padding: 29px 61px 26px 51px;
+    background-color: $box-one;
+    border-radius: 16px;
+  }
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: 184px;
+    row-gap: 17px;
+  }
+  &__item {
+    color: $darker;
+    padding: 5px 0 0 12px;
+    position: relative;
+    z-index: 1;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 27px;
+      height: 27px;
+      background-color: #f8c1d5;
+      border-radius: 50%;
+    }
+    &:nth-child(4n)::before,
+    &:nth-child(4n + 1)::before {
+      background-color: #98e5fd;
+    }
+  }
+}
+
+//----------- benefits -----------
+
+.benefits {
+  padding: 25px 49px 100px;
+  background-color: $box-two;
+  border-radius: 20px;
+  height: 702px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative;
+  margin-bottom: 44px;
+  &__title {
+    margin-bottom: 84px;
+  }
+  &__list {
+  }
+  &__item {
+    display: inline-block;
+    padding: 10px 25px;
+    color: rgba(#000, 0.7);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 2px 20px rgba(185, 185, 185, 0.15);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    span {
+      @extend %gilroy-600;
+    }
+    &:nth-child(1) {
+      bottom: 100px;
+      left: 8%;
+    }
+    &:nth-child(2) {
+      bottom: 222px;
+      left: 9%;
+    }
+    &:nth-child(3) {
+      bottom: 344px;
+      left: 18%;
+    }
+    &:nth-child(4) {
+      bottom: 444px;
+      left: 31%;
+    }
+    &:nth-child(5) {
+      bottom: 471px;
+      right: 32%;
+    }
+    &:nth-child(6) {
+      bottom: 345px;
+      right: 14%;
+    }
+    &:nth-child(7) {
+      bottom: 223px;
+      right: 4%;
+    }
+    &:nth-child(8) {
+      bottom: 100px;
+      right: 8%;
+    }
+  }
+}
+
+// box
+
+.box {
+  padding: 27px 49px 47px;
+  background-color: $box-one;
+  border-radius: 20px;
+}
+
+//----------- teachers -----------
+
+.teachers {
+  margin-bottom: 100px;
+  &__title {
+    line-height: 1.2;
+    margin-bottom: 42px;
+    span {
+      @extend %gilroy-700;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    width: 336px;
+    border-radius: 30px;
+    background-color: #fafdfe;
+    overflow: hidden;
+  }
+  &__img {
+    width: 336px;
+    height: 262px;
+    object-fit: cover;
+  }
+  &__info {
+    padding: 21px 35px 34px;
+  }
+  &__teacher {
+    margin-bottom: 12px;
+    span {
+      @extend %gilroy-700;
+      font-size: 17px;
+    }
+  }
+  p {
+    margin-bottom: 40px;
+  }
+  &__link-btn {
+    display: inline-block;
+    padding: 11px 23px;
+    @extend %gilroy-700;
+    color: #3abde6;
+    background-color: #fafdfe;
+    border: 2px solid #3abde6;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 20px rgba(176, 193, 199, 0.45));
   }
 }
 
