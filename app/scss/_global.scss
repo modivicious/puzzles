@@ -47,6 +47,17 @@ body {
   display: inline-block;
 }
 
+.light-link-btn {
+  display: inline-block;
+  padding: 11px 23px;
+  @extend %gilroy-700;
+  color: #3abde6;
+  background-color: #fafdfe;
+  border: 2px solid #3abde6;
+  border-radius: 20px;
+  filter: drop-shadow(0px 0px 20px rgba(176, 193, 199, 0.45));
+}
+
 .title {
   font-size: 50px;
   line-height: 1.1;
@@ -73,17 +84,17 @@ body {
   }
 }
 
-.img-box{
+.img-box {
   position: relative;
 }
 
 .link-arrow {
-    display: inline-block;
-    &::after {
-      content: "";
-      display: block;
-      width: 151px;
-      height: 23px;
-      background-image: url("../images/icons/link-arrow.svg");
-    }
-  } 
+  display: inline-block;
+  &::after {
+    content: "";
+    display: block;
+    width: 151px;
+    height: 23px;
+    background-image: url("../images/icons/link-arrow.svg");
+  }
+}
