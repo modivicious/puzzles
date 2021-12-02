@@ -27,8 +27,15 @@
     color: $default;
   }
   &__link {
+    transition: all 0.2s;
     &--active {
       border-bottom: 1px solid #222222;
+      &:hover {
+        border-color: #2bb3dd;
+      }
+    }
+    &:hover {
+      color: #2bb3dd;
     }
   }
 }
@@ -41,6 +48,14 @@
   &__link {
     display: flex;
     padding: 5px;
+    path {
+      transition: all 0.2s;
+    }
+    &:hover {
+      path {
+        fill: #2bb3dd;
+      }
+    }
   }
 }
 
@@ -72,6 +87,14 @@
       display: inline-block;
       margin-right: 10px;
       border-bottom: 1px solid $darker;
+    }
+    svg {
+      transition: all 0.2s;
+    }
+    &:hover {
+      svg {
+        transform: translateX(7px);
+      }
     }
   }
   &__title {
@@ -126,7 +149,7 @@
     margin-right: 33px;
   }
   &__bonus {
-    max-width: 226px;
+    max-width: 236px;
     font-size: 12px;
     padding-left: 40px;
     position: relative;
@@ -136,10 +159,10 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      width: 38px;
+      height: 41px;
       background-image: url("../images/icons/gift.svg");
       background-repeat: no-repeat;
-      width: 25px;
-      height: 28px;
     }
   }
 }
@@ -450,6 +473,14 @@
     position: absolute;
     top: 131px;
     padding: 40px;
+    path {
+      transition: all 0.15s linear;
+    }
+    &:hover {
+      path {
+        stroke: $default;
+      }
+    }
   }
   .slick-prev {
     left: 14px;
@@ -580,6 +611,7 @@
       border-radius: 50%;
       background: linear-gradient(37.84deg, #ee7070 9.27%, #f78a8a 107.03%);
       box-shadow: 0px 0px 15px rgba(185, 185, 185, 0.3);
+      z-index: 1;
     }
     &::after {
       content: "";
@@ -591,8 +623,22 @@
       border-width: 16px 0 16px 30px;
       border-style: solid;
       border-color: transparent transparent transparent #fff;
+      z-index: 1;
     }
     .link-focus {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 57px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #df9696;
+        z-index: 0;
+        animation: pulse 1150ms infinite;
+      }
       &::before {
         border-radius: 30px;
       }
@@ -602,6 +648,17 @@
     width: 265px;
     height: 189px;
     object-fit: cover;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-50%) scale(1.4);
+    opacity: 0;
   }
 }
 
@@ -669,6 +726,14 @@
       display: inline-block;
       margin-right: 11px;
       border-bottom: 1px solid $darker;
+    }
+    svg {
+      transition: all 0.2s;
+    }
+    &:hover {
+      svg {
+        transform: translateX(7px);
+      }
     }
   }
 }
@@ -787,6 +852,13 @@
   &__title {
     @extend %gilroy-700;
     text-transform: uppercase;
+  }
+  &__title,
+  &__link {
+    transition: all 0.2s;
+    &:hover {
+      opacity: 0.7;
+    }
   }
   &__label {
     @extend %gilroy-700;
