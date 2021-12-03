@@ -96,7 +96,7 @@
 
   <main class="main">
     <div class="container">
-      <section class="intro" style="background-image: url(images/content/background-pictures/1.svg);">
+      <section class="intro">
         <div class="intro__content">
           <a class="intro__following" href="#">
             <span>Как сдать ЕГЭ на максимум — 12 октября</span>
@@ -107,7 +107,7 @@
             </svg>
           </a>
           <h1 class="intro__title">
-            Ваш ребенок полюбит английский за 45 минут!
+            Ваш ребенок полюбит английский за&nbsp;45&nbsp;минут!
           </h1>
           <p>
             Зарегистрируйтесь на бесплатный пробный урок от школы иностранных языков Puzzles для детей от 5 лет в
@@ -135,6 +135,12 @@
               бонус при&nbsp;регистрации — 10&nbsp;мультфильмов на&nbsp;английском
             </span>
           </div>
+        </div>
+        <div class="intro__bg">
+          <picture>
+            <source srcset="images/content/background-pictures/1-thumb.svg" media="(max-width: 1200px)">
+            <img class='intro__img' src='images/content/background-pictures/1.svg' alt=''>
+          </picture>
         </div>
       </section>
 
@@ -193,7 +199,7 @@
 
       <section class="introductory">
         <div class="introductory__content">
-          <h2 class="title introductory__title">Пройдите вводный урок!</h2>
+          <h2 class="title introductory__title">Пройдите вводный&nbsp;урок!</h2>
           <p>Можете прийти на бесплатное занятие с Вашим ребенком.</p>
           <a class="link-btn introductory__link-btn" href="#">Записаться на урок</a>
         </div>
@@ -387,11 +393,13 @@
       </div>
 
       <section class="video">
-        <h2 class="title video__title">
-          Посмотрите видео,
-          как&nbsp;дети проводят
-          время&nbsp;в&nbsp;нашем лагере.
-        </h2>
+        <div>
+          <h2 class="title video__title">
+            Посмотрите видео,
+            как&nbsp;дети проводят
+            время&nbsp;в&nbsp;нашем лагере.
+          </h2>
+        </div>
         <div class="video__card">
           <a class="link-focus" data-fancybox href="https://youtu.be/eK71J-8As0w" aria-label='Воспроизвести видео'>
             <picture>
@@ -399,6 +407,9 @@
               <img class='video__img' src='images/content/video-bg.jpg' alt='Лагерь PUZZLES в Сочи'>
             </picture>
           </a>
+          <div class="video__play">
+            <span class="video__pulse"></span>
+          </div>
         </div>
       </section>
 
@@ -595,10 +606,10 @@
             </a>
             <ul class="footer__list">
               <li class="footer__item">
-                <a class="footer__link" href="#">Junior Levels</a>
+                <a class="footer__link" href="#">Junior&nbsp;Levels</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">Teen Levels</a>
+                <a class="footer__link" href="#">Teen&nbsp;Levels</a>
               </li>
             </ul>
           </li>

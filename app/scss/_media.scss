@@ -1,0 +1,114 @@
+@media (max-width: 1200px) {
+  .intro {
+    &__img {
+      width: 226px;
+    }
+  }
+  .suitable {
+    &__bg {
+      background-size: 443px;
+    }
+  }
+  .results {
+    &__bg {
+      background-size: 425px;
+    }
+  }
+  .teachers__list,
+  .activity__list {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+  .programs {
+    &__content {
+      flex-direction: column;
+    }
+    &__list {
+      margin-bottom: 30px;
+    }
+    &__more {
+      align-self: end;
+    }
+  }
+  .offer-block {
+    background-size: 395px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 45px;
+  }
+  .intro__title {
+    font-size: 45px;
+  }
+  .suitable {
+    overflow-x: hidden;
+    &__bg {
+      right: -113px;
+    }
+    &__inner {
+      padding: 29px 30px 79px;
+    }
+  }
+  .results {
+    padding: 29px 30px 69px;
+    &__bg {
+      left: -124px;
+    }
+    &__list {
+      padding-left: 232px;
+    }
+  }
+  .benefits {
+    &__item {
+      &:nth-child(3) {
+        left: 14%;
+      }
+      &:nth-child(4) {
+        left: 24%;
+      }
+      &:nth-child(5) {
+        right: 25%;
+      }
+      &:nth-child(6) {
+        right: 13%;
+      }
+    }
+  }
+  .introductory {
+    flex-direction: column;
+    &__content {
+      margin-bottom: 10px;
+    }
+    &__results {
+      align-self: end;
+    }
+  }
+  .video {
+    &__play {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .offer-block {
+    padding: 29px 30px 55px;
+    background-position: center right -150px;
+  }
+  .activity {
+    padding: 100px 30px;
+  }
+  .footer {
+    &__nav {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+}

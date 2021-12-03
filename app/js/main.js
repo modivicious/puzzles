@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
   $(".photos__slider").slick({
     dots: true,
     prevArrow:
