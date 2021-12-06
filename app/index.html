@@ -8,6 +8,8 @@
   <title>Школа иностранных языков - Puzzles</title>
   <meta name="description"
     content="Школа иностранных языков для детей: обучение пониманию языка, повышение успеваемости в школе, подготовка к ОГЭ и ЕГЭ">
+  <meta name="keywords"
+    content="школа иностранных языков санкт-петербург, английский для детей, егэ и огэ подготовка, бесплатное пробное занятие">
   <meta name="theme-color" content="#2BB3DD">
   <link rel="preload" href="fonts/gilroy-regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/gilroy-extrabold.woff2" as="font" crossorigin>
@@ -29,6 +31,12 @@
         <a class="menu__logo" href="#">
           <img class="logo" src="images/logo.svg" alt="Логотип Puzzles, вернуться на главную страницу">
         </a>
+
+        <button class="menu__btn" type="button" aria-label="Меню">
+          <span></span>
+        </button>
+
+        <div class="overlay" role="button" aria-hidden="true"></div>
 
         <ul class="menu__list">
           <li class="menu__item">
@@ -132,7 +140,7 @@
               Зарегистрироваться
             </a>
             <span class="offer__bonus">
-              бонус при&nbsp;регистрации — 10&nbsp;мультфильмов на&nbsp;английском
+              бонус при&nbsp;регистрации&nbsp;— 10&nbsp;мультфильмов на&nbsp;английском
             </span>
           </div>
         </div>
@@ -146,7 +154,7 @@
 
       <section class="suitable">
         <div class="suitable__bg" style="background-image: url(images/content/background-pictures/2.svg);"></div>
-        <div class="suitable__inner">
+        <div class="suitable__inner block-inner">
           <div class="suitable__content">
             <h2 class="title suitable__title">Для кого это подходит?</h2>
             <ul class="suitable__list">
@@ -154,7 +162,8 @@
                 Для детей, которые плохо понимают английский <br> в школе.
               </li>
               <li class="suitable__item">
-                Для детей, которым сейчас не нравится изучать <br> иностранный язык, а в школе не могут заинтересовать.
+                Для детей, которым сейчас не нравится изучать <br> иностранный язык, а в школе не могут
+                заинтересовать.
               </li>
               <li class="suitable__item">
                 Для детей, которые много времени проводят с гаджетами <br> и мало чем увлекаются.
@@ -170,7 +179,7 @@
         </div>
       </section>
 
-      <section class="results">
+      <section class="results block-inner">
         <div class="results__bg" style="background-image: url(images/content/background-pictures/3.svg);">
         </div>
         <div class="results__content">
@@ -222,7 +231,7 @@
         </div>
       </section>
 
-      <section class="benefits" style="background-image: url(images/content/background-pictures/4.svg);">
+      <section class="benefits block-inner" style="background-image: url(images/content/background-pictures/4.svg);">
         <h2 class="title benefits__title">Почему стоит выбрать Puzzles?</h2>
         <ul class="benefits__list">
           <li class="benefits__item">
@@ -252,16 +261,16 @@
         </ul>
       </section>
 
-      <div class="box">
+      <div class="box block-inner">
         <section class="teachers">
           <h2 class="title teachers__title">
-            Наши преподаватели — сертифицированные педагоги, которые обучили в сумме
+            Наши преподаватели&nbsp;— сертифицированные педагоги, которые обучили в сумме
             <span>больше&nbsp;700&nbsp;детей.</span>
           </h2>
           <ul class="teachers__list">
             <li class="teachers__item">
               <div class="img-box">
-                <a class="link-focus" href="#">
+                <a class="link-focus" href="#" aria-label="Подробнее о педагоге">
                   <picture>
                     <source srcset="images/content/teachers/1.webp" type="image/webp">
                     <img class="teachers__img" src="images/content/teachers/1.jpg" alt="">
@@ -280,7 +289,7 @@
             </li>
             <li class="teachers__item">
               <div class="img-box">
-                <a class="link-focus" href="#">
+                <a class="link-focus" href="#" aria-label="Подробнее о педагоге">
                   <picture>
                     <source srcset="images/content/teachers/2.webp" type="image/webp">
                     <img class="teachers__img" src="images/content/teachers/2.jpg" alt="">
@@ -299,7 +308,7 @@
             </li>
             <li class="teachers__item">
               <div class="img-box">
-                <a class="link-focus" href="#">
+                <a class="link-focus" href="#" aria-label="Подробнее о педагоге">
                   <picture>
                     <source srcset="images/content/teachers/3.webp" type="image/webp">
                     <img class="teachers__img" src="images/content/teachers/3.jpg" alt="">
@@ -393,7 +402,7 @@
       </div>
 
       <section class="video">
-        <div>
+        <div class="video__title-box">
           <h2 class="title video__title">
             Посмотрите видео,
             как&nbsp;дети проводят
@@ -413,7 +422,7 @@
         </div>
       </section>
 
-      <section class="programs">
+      <section class="programs block-inner">
         <h2 class="title programs__title">
           В школе Puzzles полюбить английский может каждый ребенок.
         </h2>
@@ -422,7 +431,7 @@
             <li class="programs__item">
               <div class="programs__info">
                 <a class="programs__link" href="#">
-                  <h3 class="programs__supname">Курс по английскому, 6-12 лет</h3>
+                  <h3 class="programs__supname">Курс по английскому, 6&#8209;12&nbsp;лет</h3>
                   <h4 class="programs__name">Junior Levels</h4>
                 </a>
                 <p>
@@ -447,7 +456,7 @@
             <li class="programs__item">
               <div class="programs__info">
                 <a class="programs__link" href="#">
-                  <h3 class="programs__supname">Курс по английскому, 12-16 лет</h3>
+                  <h3 class="programs__supname">Курс по английскому, 12&#8209;16&nbsp;лет</h3>
                   <h4 class="programs__name">Teen Levels</h4>
                 </a>
                 <p>
@@ -474,43 +483,45 @@
         </div>
       </section>
 
-      <section class="offer-block" style="background-image: url(images/content/background-pictures/6.svg);">
-        <div class="offer-block__content">
+      <section class="offer-block block-inner" style="background-image: url(images/content/background-pictures/6.svg);">
+        <div class="offer-block__inner">
           <h2 class="title offer-block__title">
-            Запишитесь на пробное
+            Запишитесь на&nbsp;пробное
             бесплатное занятие!
           </h2>
-          <p>Приходите на пробный урок с Вашим ребенком!</p>
-          <ul class="offer-block__list">
-            <li class="offer-block__item">
-              — Мы определим его уровень языка
-            </li>
-            <li class="offer-block__item">
-              — Пройдем темы по лексике и грамматике, выучим новые слова
-            </li>
-            <li class="offer-block__item">
-              — Подарим подарок — список повседневных фраз на английском для&nbsp;общения.
-            </li>
-          </ul>
-          <div class="offer__bottom">
-            <a class="link-btn offer__link-btn" href="#">
-              Записаться на урок
-            </a>
-            <span class="offer__bonus">
-              бонус при&nbsp;регистрации — 10&nbsp;мультфильмов на&nbsp;английском
-            </span>
+          <div class="offer-block__content">
+            <p>Приходите на пробный урок с Вашим ребенком!</p>
+            <ul class="offer-block__list">
+              <li class="offer-block__item">
+                — Мы определим его уровень языка
+              </li>
+              <li class="offer-block__item">
+                — Пройдем темы по лексике и грамматике, выучим новые слова
+              </li>
+              <li class="offer-block__item">
+                — Подарим подарок — список повседневных фраз на английском для&nbsp;общения.
+              </li>
+            </ul>
+            <div class="offer__bottom">
+              <a class="link-btn offer__link-btn" href="#">
+                Записаться на урок
+              </a>
+              <span class="offer__bonus">
+                бонус при&nbsp;регистрации&nbsp;— 10&nbsp;мультфильмов на&nbsp;английском
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="activity">
         <h2 class="title activity__title">
-          Ближайшие мероприятия от Puzzles
+          Ближайшие мероприятия от&nbsp;Puzzles
         </h2>
         <ul class="activity__list">
           <li class="activity__item">
             <div class='img-box'>
-              <a class='link-focus' href='#'>
+              <a class='link-focus' href='#' aria-label="Записаться на мероприятие">
                 <picture>
                   <source srcset='images/content/activity/1.webp' type='image/webp'>
                   <img class='activity__img' src='images/content/activity/1.jpg' alt=''>
@@ -534,7 +545,7 @@
           </li>
           <li class="activity__item">
             <div class='img-box'>
-              <a class='link-focus' href='#'>
+              <a class='link-focus' href='#' aria-label="Записаться на мероприятие">
                 <picture>
                   <source srcset='images/content/activity/2.webp' type='image/webp'>
                   <img class='activity__img' src='images/content/activity/2.jpg' alt=''>
@@ -560,7 +571,7 @@
           </li>
           <li class="activity__item">
             <div class='img-box'>
-              <a class='link-focus' href='#'>
+              <a class='link-focus' href='#' aria-label="Записаться на мероприятие">
                 <picture>
                   <source srcset='images/content/activity/3.webp' type='image/webp'>
                   <img class='activity__img' src='images/content/activity/3.jpg' alt=''>
@@ -606,10 +617,10 @@
             </a>
             <ul class="footer__list">
               <li class="footer__item">
-                <a class="footer__link" href="#">Junior&nbsp;Levels</a>
+                <a class="footer__link" href="#">Junior Levels</a>
               </li>
               <li class="footer__item">
-                <a class="footer__link" href="#">Teen&nbsp;Levels</a>
+                <a class="footer__link" href="#">Teen Levels</a>
               </li>
             </ul>
           </li>

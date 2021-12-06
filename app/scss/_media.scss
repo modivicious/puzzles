@@ -14,11 +14,15 @@
       background-size: 425px;
     }
   }
+  .teachers .light-link-btn,
+  .activity .light-link-btn {
+    width: 100%;
+  }
   .teachers__list,
   .activity__list {
     justify-content: space-evenly;
     flex-wrap: wrap;
-    row-gap: 50px;
+    row-gap: 40px;
   }
   .programs {
     &__content {
@@ -37,26 +41,24 @@
 }
 
 @media (max-width: 1000px) {
-  body {
-    font-size: 14px;
-  }
-  .title {
-    font-size: 45px;
-  }
+  .title,
   .intro__title {
-    font-size: 45px;
+    font-size: 42px;
+  }
+  .block-inner {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .menu__list {
+    gap: 36px;
   }
   .suitable {
     overflow-x: hidden;
     &__bg {
-      right: -113px;
-    }
-    &__inner {
-      padding: 29px 30px 79px;
+      right: -175px;
     }
   }
   .results {
-    padding: 29px 30px 69px;
     &__bg {
       left: -124px;
     }
@@ -87,9 +89,11 @@
     }
     &__results {
       align-self: end;
+      padding: 29px 15px 26px;
     }
   }
   .video {
+    padding-right: 0;
     &__play {
       position: absolute;
       top: 0;
@@ -99,16 +103,424 @@
     }
   }
   .offer-block {
-    padding: 29px 30px 55px;
     background-position: center right -150px;
-  }
-  .activity {
-    padding: 100px 30px;
   }
   .footer {
     &__nav {
       grid-auto-flow: row;
       grid-template-columns: repeat(3, auto);
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 0;
+  }
+  .menu {
+    &__btn {
+      display: flex;
+      &.menu__btn--active {
+        span {
+          transform: scale(0);
+        }
+        &::before {
+          top: 48%;
+          transform: rotate(-45deg);
+        }
+        &::after {
+          top: 48%;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &__list {
+      width: 320px;
+      grid-auto-flow: row;
+      grid-auto-rows: max-content;
+      justify-content: start;
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 200;
+      padding: 135px 0 0 60px;
+      height: 100vh;
+      background-color: #fff;
+      transform: translateX(200%);
+      transition: all 0.3s;
+      &.menu__list--active {
+        transform: translateX(0);
+      }
+    }
+    .socials {
+      position: fixed;
+      right: 150px;
+      z-index: 200;
+      transform: translateX(320%);
+      transition: all 0.3s;
+      &.socials--active {
+        transform: translateX(0);
+      }
+    }
+  }
+  .block-inner {
+    padding-bottom: 40px;
+  }
+  .intro {
+    &__bg {
+      display: none;
+    }
+    &__content {
+      padding-top: 30px;
+    }
+  }
+  .suitable {
+    &__bg {
+      top: 0;
+      right: -85px;
+      background-position: right top;
+    }
+    &__list {
+      padding-top: 370px;
+    }
+  }
+  .results {
+    &__bg {
+      top: 85px;
+      left: -32px;
+      background-position: left top;
+    }
+    &__list {
+      padding-top: 310px;
+      padding-left: unset;
+    }
+  }
+  .introductory {
+    padding: 60px 0;
+    &__content {
+      margin-bottom: 32px;
+    }
+  }
+  .benefits {
+    &__item {
+      font-size: 14px;
+      &:nth-child(1) {
+        left: -3%;
+      }
+      &:nth-child(2) {
+        left: -3%;
+      }
+      &:nth-child(3) {
+        left: -3%;
+      }
+      &:nth-child(4) {
+        left: 5%;
+      }
+      &:nth-child(5) {
+        right: 5%;
+      }
+      &:nth-child(6) {
+        right: -3%;
+      }
+      &:nth-child(7) {
+        right: -3%;
+      }
+      &:nth-child(8) {
+        right: -3%;
+      }
+    }
+  }
+  .teachers {
+    margin-bottom: 60px;
+    &__title {
+      font-size: 38px;
+    }
+  }
+  .photos {
+    margin-bottom: 60px;
+    &__slide {
+      margin: 0 10px;
+    }
+    .slick-arrow {
+      top: 0;
+      bottom: 0;
+      transform: unset;
+      path {
+        stroke: #fff;
+      }
+    }
+    .slick-prev {
+      left: 0;
+      padding: 0 40px 0 20px;
+    }
+    .slick-next {
+      right: 0;
+      padding: 0 20px 0 40px;
+    }
+  }
+  .lesson {
+    &__form {
+      margin: 0 auto;
+    }
+    &__form-box {
+      grid-auto-flow: row;
+      grid-template-columns: unset;
+      gap: 17px;
+    }
+  }
+  .video {
+    flex-direction: column;
+    padding: 60px 0;
+    &__title-box {
+      align-self: flex-start;
+      margin-bottom: 40px;
+    }
+    &__title {
+      width: 100%;
+    }
+    &__img {
+      width: 100%;
+    }
+  }
+  .programs {
+    &__list {
+      grid-auto-flow: row;
+      gap: 40px;
+    }
+  }
+  .offer-block {
+    background-position: top 43px right -200px;
+    &__content {
+      padding-top: 240px;
+    }
+  }
+  .activity {
+    padding: 60px 0;
+  }
+  .footer {
+    &__inner {
+      grid-auto-flow: row;
+      gap: 63px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 25px;
+  }
+  .block-inner {
+    padding: 21px 15px 40px;
+  }
+  .offer {
+    &__bottom {
+      grid-auto-flow: row;
+      grid-template-columns: unset;
+      gap: 20px;
+    }
+    &__bonus {
+      justify-self: center;
+    }
+  }
+  .suitable__item,
+  .results__item {
+    padding-left: 78px;
+  }
+  .results__title {
+    max-width: 360px;
+  }
+  .introductory {
+    p {
+      max-width: 260px;
+      &::before {
+        bottom: -36px;
+        transform: rotate(270deg);
+      }
+    }
+    &__link-btn {
+      width: 100%;
+    }
+    &__results {
+      align-self: unset;
+    }
+    &__list {
+      grid-auto-columns: min-content minmax(auto, 184px);
+      justify-content: space-between;
+      gap: 17px;
+    }
+  }
+  .benefits {
+    height: 507px;
+    background-size: 335px;
+    background-position: bottom 13px center;
+    &__item {
+      font-size: 12px;
+      padding: 10px 16px;
+      &:nth-child(1) {
+        bottom: 59px;
+      }
+      &:nth-child(2) {
+        bottom: 138px;
+      }
+      &:nth-child(3) {
+        bottom: 217px;
+      }
+      &:nth-child(4) {
+        bottom: 279px;
+      }
+      &:nth-child(5) {
+        bottom: 292px;
+      }
+      &:nth-child(6) {
+        bottom: 217px;
+      }
+      &:nth-child(7) {
+        bottom: 138px;
+      }
+      &:nth-child(8) {
+        bottom: 59px;
+      }
+    }
+  }
+  .teachers {
+    &__title {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  .photos {
+    &__title {
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+    &__slider {
+      margin-bottom: 25px;
+    }
+    &__slide {
+      margin: unset;
+    }
+    &__link {
+      margin-right: 0;
+    }
+  }
+  .lesson {
+    background-position: top 160px left -54px;
+    &__title {
+      font-size: 30px;
+    }
+    &__form {
+      padding-top: 110px;
+    }
+  }
+  .programs {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__list {
+      margin-bottom: 25px;
+    }
+    &__item {
+      padding: 40px 14px 40px 35px;
+    }
+    &__link {
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .offer-block {
+    background-size: 350px;
+    background-position: top 170px left;
+    &__list {
+      margin-bottom: 25px;
+    }
+  }
+  .activity {
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__list {
+      margin-bottom: 25px;
+    }
+  }
+  .footer {
+    padding: 60px 0 110px;
+    &__nav {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .intro {
+    &__title {
+      font-size: 34px;
+    }
+    &__following {
+      font-size: 12px;
+    }
+  }
+  .introductory {
+    p {
+      &::before {
+        content: unset;
+      }
+    }
+  }
+  .benefits {
+    height: 630px;
+    background-position: center;
+    &__item {
+      &:nth-child(1) {
+        bottom: 103px;
+      }
+      &:nth-child(2) {
+        bottom: 226px;
+      }
+      &:nth-child(3) {
+        bottom: 347px;
+      }
+      &:nth-child(4) {
+        bottom: 445px;
+      }
+      &:nth-child(5) {
+        bottom: 389px;
+      }
+      &:nth-child(6) {
+        bottom: 287px;
+      }
+      &:nth-child(7) {
+        bottom: 165px;
+      }
+      &:nth-child(8) {
+        bottom: 43px;
+      }
+    }
+  }
+  .photos__img {
+    height: 275px;
+  }
+  .teachers__title,
+  .lesson__title {
+    font-size: 26px;
+  }
+  .teachers__content {
+    padding: 21px 15px 34px;
+  }
+  .programs__item{
+    padding-left: 22px;
+  }
+  .offer-block__content {
+    padding-top: 325px;
+  }
+  .activity__content {
+    padding: 28px 15px 36px;
   }
 }

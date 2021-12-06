@@ -26,10 +26,18 @@ body {
   overflow: hidden;
 }
 
+.hide-overflow {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.block-inner {
+  padding: 29px 49px 0;
 }
 
 .logo {
@@ -41,12 +49,15 @@ body {
   display: inline-block;
   @extend %gilroy-800;
   color: #fff;
+  text-align: center;
   background: linear-gradient(279.5deg, #5ad4fa -3.85%, #2bb3dd 114.74%);
   box-shadow: 0px 0px 20px rgba(176, 193, 199, 0.5);
   border-radius: 20px;
   padding: 15px 32px;
-  position: relative;
+  will-change: transform;
+  transition: all 0.3s;
   overflow: hidden;
+  position: relative;
   &::before {
     content: "";
     position: absolute;
@@ -58,11 +69,15 @@ body {
     box-shadow: 0 0 10px #fff;
     filter: blur(3px);
     opacity: 0.8;
-    transition: all 0.5s;
+    transition: all 0.6s;
+    transition-delay: 0.05s;
     transform: rotate(-50deg);
   }
-  &:hover::before {
-    left: 150%;
+  &:hover {
+    transform: scale(1.03);
+    &::before {
+      left: 150%;
+    }
   }
 }
 
@@ -71,6 +86,7 @@ body {
   padding: 11px 23px;
   @extend %gilroy-700;
   color: #3abde6;
+  text-align: center;
   background-color: #fafdfe;
   border: 2px solid #3abde6;
   border-radius: 20px;
