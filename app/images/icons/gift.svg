@@ -1,1 +1,21 @@
-<svg width="37" height="41" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#a)" stroke="#222" stroke-width=".88" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"><path d="M11.83 17.6h13.35v12.28H11.82V17.6Z" fill="#F7B26A"/><path d="M16.96 19.64h3.08v10.24h-3.08V19.64ZM13.29 13.56l2.43-2.43 3.8 3.8-2.44 2.43-3.8-3.8Z" fill="#D82929"/><path d="m19.92 17.35-2.44-2.43 3.8-3.8 2.44 2.43-3.8 3.8Z" fill="#D82929"/><path d="M10.66 14.51h15.68v5.13H10.66V14.5Z" fill="#F47E5F"/><path d="M16.4 14.51h4.2v5.13h-4.2V14.5Z" fill="#D82929"/></g><defs><filter id="a" x=".22" y=".68" width="36.55" height="39.63" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0.941667 0 0 0 0 0.532042 0 0 0 0 0.235417 0 0 0 0.8 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_242_14"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_242_14" result="shape"/></filter></defs></svg>
+<svg width="37" height="41" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#a)" stroke="#222" stroke-width=".88" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11.83 17.6h13.35v12.28H11.82V17.6Z" fill="#F7B26A" />
+    <path d="M16.96 19.64h3.08v10.24h-3.08V19.64ZM13.29 13.56l2.43-2.43 3.8 3.8-2.44 2.43-3.8-3.8Z" fill="#D82929" />
+    <path d="m19.92 17.35-2.44-2.43 3.8-3.8 2.44 2.43-3.8 3.8Z" fill="#D82929" />
+    <path d="M10.66 14.51h15.68v5.13H10.66V14.5Z" fill="#F47E5F" />
+    <path d="M16.4 14.51h4.2v5.13h-4.2V14.5Z" fill="#D82929" />
+  </g>
+  <defs>
+    <filter id="a" x=".22" y=".68" width="36.55" height="39.63" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+      <feOffset />
+      <feGaussianBlur stdDeviation="5" />
+      <feComposite in2="hardAlpha" operator="out" />
+      <feColorMatrix values="0 0 0 0 0.941667 0 0 0 0 0.532042 0 0 0 0 0.235417 0 0 0 0.8 0" />
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_242_14" />
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_242_14" result="shape" />
+    </filter>
+  </defs>
+</svg>

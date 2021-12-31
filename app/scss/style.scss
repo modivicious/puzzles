@@ -341,11 +341,12 @@
     &::before {
       content: "";
       position: absolute;
-      bottom: -84px;
-      left: 230px;
-      width: 92px;
-      height: 92px;
-      background-image: url("../images/icons/arrow.png");
+      bottom: -70px;
+      left: 250px;
+      width: 59px;
+      height: 53px;
+      background-image: url("../images/icons/arrow.svg");
+      background-repeat: no-repeat;
     }
   }
   &__content {
