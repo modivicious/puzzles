@@ -49,4 +49,46 @@ $(function () {
     }
     lastScroll = scrollPosition();
   });
+
+  var logo = document.querySelector('.menu__logo');
+
+  function getAllElementsAttr(elem, attr) {
+    var array = [];
+    elem.forEach((e) => {
+      array.push(e.getAttribute(attr));
+    });
+    return array;
+  }
+
+  function getRandomIndex(array) {
+    var randomIndex = Math.floor(Math.random() * array.length);
+    return randomIndex;
+  }
+
+  function setValue(elem, attr, array, index) {
+    var value = array[index];
+    array.splice(index, 1);
+    elem.setAttribute(attr, value);
+  }
+
+  function changeAttributes(elemsArray, valuesArray, attr) {
+    elemsArray.forEach((e) => {
+      var randomIndex = getRandomIndex(valuesArray);
+      setValue(e, attr, valuesArray, randomIndex);
+    });
+  }
+
+  function puzzlesShuffle() {
+    var paths = document.querySelectorAll('.puzzle');
+    var colors = getAllElementsAttr(paths, 'fill');
+    changeAttributes(paths, colors, 'fill');
+  }
+
+  setTimeout(() => {
+    for (var i = 0; i < 2; i++) setTimeout(() => puzzlesShuffle(), i * 500);
+  }, 650)
+
+
+
+  logo.addEventListener("mouseenter", puzzlesShuffle);
 });

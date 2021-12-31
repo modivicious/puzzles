@@ -69,13 +69,16 @@
     visibility: hidden;
     opacity: 0;
     background-color: rgba(45, 45, 45, 0.45);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     z-index: 140;
     transition: 0.25s ease-in;
     &.overlay--active {
       visibility: visible;
       opacity: 1;
     }
+  }
+  .puzzle {
+    transition: all 0.2s linear;
   }
   &__list {
     display: grid;

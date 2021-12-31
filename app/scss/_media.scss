@@ -144,7 +144,7 @@
       right: 0;
       z-index: 200;
       padding: 135px 0 0 60px;
-      height: 100vh;
+      min-height: 100vh;
       background-color: #fff;
       transform: translateX(200%);
       transition: all 0.3s;
