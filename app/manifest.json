@@ -1,13 +1,18 @@
 {
-  "name": "Starter",
-  "short_name": "Starter",
+  "lang": "ru",
+  "dir": "ltr",
+  "name": "Puzzles",
+  "description": "",
+  "short_name": "",
   "icons": [
     {
       "src": "images/favicon/google-touch-icon.png",
       "sizes": "512x512"
     }
   ],
+  "start_url": "index.html",
+  "display": "fullscreen",
+  "orientation": "landscape",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
-  "display": "fullscreen"
+  "theme_color": "#2BB3DD"
 }
