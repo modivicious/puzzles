@@ -69,9 +69,9 @@
     visibility: hidden;
     opacity: 0;
     background-color: rgba(45, 45, 45, 0.45);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     z-index: 140;
-    transition: 0.25s ease-in;
+    transition: all 0.25s ease-in;
     &.overlay--active {
       visibility: visible;
       opacity: 1;
@@ -273,6 +273,7 @@
       top: 3px;
       left: 0;
       background-image: url("../images/icons/puzzles.svg");
+      background-repeat: no-repeat;
       width: 49px;
       height: 38px;
     }
@@ -317,6 +318,7 @@
       top: 5px;
       left: 0;
       background-image: url("../images/icons/check.svg");
+      background-repeat: no-repeat;
       width: 47px;
       height: 39px;
     }

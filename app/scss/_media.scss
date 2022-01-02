@@ -146,6 +146,7 @@
       padding: 135px 0 0 60px;
       min-height: 100vh;
       background-color: #fff;
+      will-change: transform;
       transform: translateX(200%);
       transition: all 0.3s;
       &.menu__list--active {
@@ -238,24 +239,21 @@
   }
   .photos {
     margin-bottom: 60px;
-    &__slide {
-      margin: 0 10px;
-    }
     .slick-arrow {
-      top: 0;
-      bottom: 0;
-      transform: unset;
-      path {
-        stroke: #fff;
+      svg {
+        transform: scale(0.786, 0.657);
+        path {
+          stroke: #fff;
+        }
       }
     }
     .slick-prev {
       left: 0;
-      padding: 0 40px 0 20px;
+      padding-left: 20px;
     }
     .slick-next {
       right: 0;
-      padding: 0 20px 0 40px;
+      padding-right: 20px;
     }
   }
   .lesson {
@@ -514,7 +512,7 @@
   .teachers__content {
     padding: 21px 15px 34px;
   }
-  .programs__item{
+  .programs__item {
     padding-left: 22px;
   }
   .offer-block__content {

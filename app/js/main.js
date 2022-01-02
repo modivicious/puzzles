@@ -35,7 +35,7 @@ $(function () {
   const screenHeight = window.screen.height;
 
   window.addEventListener("scroll", () => {
-    if (screenWidth < 1366) {
+    if (screenWidth < 769) {
       if (scrollPosition() > screenHeight)
         header.classList.add("header--fixed");
       else header.classList.remove("header--fixed");
@@ -50,6 +50,8 @@ $(function () {
     lastScroll = scrollPosition();
   });
 
+
+  // logo animation
   var logo = document.querySelector('.menu__logo');
 
   function getAllElementsAttr(elem, attr) {
@@ -86,9 +88,7 @@ $(function () {
 
   setTimeout(() => {
     for (var i = 0; i < 2; i++) setTimeout(() => puzzlesShuffle(), i * 500);
-  }, 650)
-
-
+  }, 620)
 
   logo.addEventListener("mouseenter", puzzlesShuffle);
 });
