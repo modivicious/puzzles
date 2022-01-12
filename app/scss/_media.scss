@@ -92,6 +92,11 @@
       padding: 29px 15px 26px;
     }
   }
+  .photos {
+    &__img {
+      height: auto;
+    }
+  }
   .video {
     padding-right: 0;
     &__play {
@@ -239,6 +244,9 @@
   }
   .photos {
     margin-bottom: 60px;
+    &__slide {
+      margin: unset;
+    }
     .slick-arrow {
       svg {
         transform: scale(0.786, 0.657);
@@ -393,9 +401,6 @@
     }
     &__slider {
       margin-bottom: 25px;
-    }
-    &__slide {
-      margin: unset;
     }
     &__link {
       margin-right: 0;
