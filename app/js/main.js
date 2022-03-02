@@ -26,7 +26,7 @@ $(function () {
   $(".menu__btn").on("click", () => toggleMenu());
   $(".menu .overlay").on("click", () => toggleMenu());
 
-  var lastScroll = 0;
+  let lastScroll = 0;
   const header = document.querySelector(".header");
 
   const scrollPosition = () =>
@@ -50,45 +50,42 @@ $(function () {
     lastScroll = scrollPosition();
   });
 
-
   // logo animation
-  var logo = document.querySelector('.menu__logo');
-
-  function getAllElementsAttr(elem, attr) {
-    var array = [];
-    elem.forEach((e) => {
-      array.push(e.getAttribute(attr));
-    });
-    return array;
-  }
-
-  function getRandomIndex(array) {
-    var randomIndex = Math.floor(Math.random() * array.length);
-    return randomIndex;
-  }
-
-  function setValue(elem, attr, array, index) {
-    var value = array[index];
-    array.splice(index, 1);
-    elem.setAttribute(attr, value);
-  }
-
-  function changeAttributes(elemsArray, valuesArray, attr) {
-    elemsArray.forEach((e) => {
-      var randomIndex = getRandomIndex(valuesArray);
-      setValue(e, attr, valuesArray, randomIndex);
-    });
-  }
+  const paths = document.querySelectorAll('.puzzle');
 
   function puzzlesShuffle() {
-    var paths = document.querySelectorAll('.puzzle');
-    var colors = getAllElementsAttr(paths, 'fill');
+    let colors = getEachElementAttr(paths, 'fill');
     changeAttributes(paths, colors, 'fill');
   }
 
+  function getEachElementAttr(elems, attr) {
+    let array = [];
+    for (let e of elems)
+      array.push(e.getAttribute(attr));
+    return array;
+  }
+
+  function changeAttributes(elemsArray, valuesArray, attr) {
+    for (let e of elemsArray) {
+      let randomIndex = getRandomIndex(valuesArray.length);
+      setAttributeValue(e, valuesArray[randomIndex], attr);
+      valuesArray.splice(randomIndex, 1);
+    }
+  }
+
+  function getRandomIndex(length) {
+    let randomIndex = Math.floor(Math.random() * length);
+    return randomIndex;
+  }
+
+  function setAttributeValue(elem, value, attr) {
+    elem.setAttribute(attr, value);
+  }
+
   setTimeout(() => {
-    for (var i = 0; i < 2; i++) setTimeout(() => puzzlesShuffle(), i * 500);
+    for (let i = 0; i < 2; i++) setTimeout(() => puzzlesShuffle(), i * 500);
   }, 620)
 
+  let logo = document.querySelector('.menu__logo');
   logo.addEventListener("mouseenter", puzzlesShuffle);
 });
