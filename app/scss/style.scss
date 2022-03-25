@@ -69,7 +69,6 @@
     visibility: hidden;
     opacity: 0;
     background-color: rgba(45, 45, 45, 0.45);
-    backdrop-filter: blur(2px);
     z-index: 140;
     transition: all 0.25s ease-in;
     &.overlay--active {
