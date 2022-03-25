@@ -152,20 +152,20 @@
       min-height: 100vh;
       background-color: #fff;
       will-change: transform;
-      transform: translateX(200%);
+      transform: translate3d(200%, 0, 0);
       transition: all 0.3s;
       &.menu__list--active {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
     }
     .socials {
       position: fixed;
       right: 150px;
       z-index: 200;
-      transform: translateX(320%);
+      transform: translate3d(320%, 0, 0);
       transition: all 0.3s;
       &.socials--active {
-        transform: translateX(0);
+        transform: translate3d(0, 0, 0);
       }
     }
   }
